@@ -1,0 +1,1 @@
+To run solution download the project and run SmartHomeApi project in visual studio.

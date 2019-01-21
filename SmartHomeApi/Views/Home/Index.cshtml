@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/Style.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/externallibs")
+    <script src="~/Scripts/Custom/Home.js"></script>
+</head>
+<body ng-app="HomeApp" ng-controller="HomeController">
+    <div class="divContent">
+        <div id="divHomeInfo" class="mainDiv">
+            <h3 ng-show="SelectedHome.Name != undefined">House: {{SelectedHome.Name}}</h3>
+            <ul>                
+                <li ng-repeat="room in SelectedHome.Rooms">
+                    @*Dynamically writes out the properties of the rooms, this however gives the side effect that one may have to do some "special formatting" for different values. Like wanting a "°C" after temperature etc.*@
+                    <p ng-repeat="prop in room.Properties">{{prop.Name}}: {{prop.Value}}</p>
+                </li>
+            </ul>
+        </div>
+        <div id="divSelector" class="mainDiv">
+            <h3>Homes</h3>
+            <select id="selectHomes" size="10" ng-model="SelectedOption" ng-change="LoadInfo()">
+                <option ng-repeat="home in HomeList" value="{{home.Name}}">{{home.Name}}</option>
+            </select>
+        </div>
+    </div>
+</body>
+</html>

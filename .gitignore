@@ -1,0 +1,6 @@
+packages/
+SmartHomeApi/bin/
+SmartHomeApi/obj/
+SmartHomeApi.Tests/bin/
+SmartHomeApi.Tests/obj/
+.vs/

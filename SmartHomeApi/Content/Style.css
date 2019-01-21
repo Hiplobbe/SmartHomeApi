@@ -1,0 +1,18 @@
+﻿.mainDiv
+{
+    max-width: 45%
+}
+.divContent
+{
+    padding: 0 20% 0 20%;
+}
+#divHomeInfo {
+    float: left;
+}
+#divSelector {
+    float: right;
+}
+#selectHomes
+{
+    min-width: 100px;
+}
